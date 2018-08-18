@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dimond">
+    <EditText
+        android:id="@+id/userNameEt"
+        android:hint="Enter your name"
+        android:textColor="#f9f6f6"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/UserTypeEt"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/type"
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/departmentEt"
+        android:hint="@string/enter_department"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/passEt"
+        android:hint="@string/enter_your_password"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/contactEt"
+        android:hint="@string/contact_number"
+        android:textColor="#ffffff"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/emailEt"
+        android:hint="@string/email"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/saveBt"
+        android:text="@string/save"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

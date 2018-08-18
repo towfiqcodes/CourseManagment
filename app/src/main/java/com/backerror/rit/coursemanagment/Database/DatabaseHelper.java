@@ -1,6 +1,7 @@
 package com.backerror.rit.coursemanagment.Database;
 
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.view.View;
@@ -9,10 +10,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int VERSION=1;
     private static final String DATABASE_NAME="course_db";
 
-    private static final String STUDENT_TABLE_NAME="student_db";
-    private static final String STUDENT_COLUMN_NAME="student_name";
-    private static final String STUDENT_COLUMN_ID="student_id";
-    private static final String STUDENT_COLUMN_DEPT_NAME="student_department";
+    public static final String STUDENT_TABLE_NAME="student_db";
+    public static final String STUDENT_COLUMN_ID="student_id";
+    public static final String STUDENT_COLUMN_NAME="student_name";
+    public static final String STUDENT_COLUMN_DEPT_NAME="student_department";
 
     private static final String DROP_TABLE_STUDENT="DROP TABLE IF EXISTS "+STUDENT_TABLE_NAME;
 
@@ -22,10 +23,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             +STUDENT_COLUMN_DEPT_NAME +" VARCHAR(25)" + ")";
 
 
-    private static final String TEACHER_TABLE_NAME="teacher_db";
-    private static final String TEACHER_COLUMN_NAME="teacher_name";
-    private static final String TEACHER_COLUMN_ID="teacher_id";
-    private static final String TEACHER_COLUMN_DEPT_NAME="teacher_department";
+    public static final String TEACHER_TABLE_NAME="teacher_db";
+    public static final String TEACHER_COLUMN_ID="teacher_id";
+    public static final String TEACHER_COLUMN_NAME="teacher_name";
+    public static final String TEACHER_COLUMN_DEPT_NAME="teacher_department";
 
     private static final String DROP_TABLE_TEACHER="DROP TABLE IF EXISTS "+TEACHER_TABLE_NAME;
 
@@ -46,14 +47,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL( CREATE_STUDENT_TABLE );
-        db.execSQL( CREATE_TEACHER_TABLE );
+        try {
+            db.execSQL( CREATE_STUDENT_TABLE );
+            db.execSQL( CREATE_TEACHER_TABLE );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL( DROP_TABLE_STUDENT );
-        db.execSQL( DROP_TABLE_TEACHER );
-        onCreate( db );
+        try {
+            db.execSQL( DROP_TABLE_STUDENT );
+            db.execSQL( DROP_TABLE_TEACHER );
+            onCreate( db );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

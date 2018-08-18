@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/android_layout"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/list_item_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <Button
+            android:id="@+id/addBt"
+            android:text="@string/add_courses"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:layout_width="5dp"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/viewBt"
+            android:text="Courses Taken"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:layout_width="5dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+</LinearLayout>
