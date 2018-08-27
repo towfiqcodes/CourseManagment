@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">CourseManagment</string>
-<<<<<<< Updated upstream
-=======
     <string name="enter_your_id">Enter your ID</string>
     <string name="enter_your_name">Enter your Name</string>
     <string name="type">Type</string>
@@ -19,10 +17,14 @@
     <string name="department_name">Department name</string>
     <string name="c_programming">C Programming</string>
     <string name="database">DataBase</string>
+    <string name="teacher_name">Teacher name</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+
     //registration page
     <string-array name="type">
         <item>Student</item>
         <item>Teacher</item>
     </string-array>
->>>>>>> Stashed changes
+
 </resources>

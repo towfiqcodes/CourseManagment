@@ -3,10 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dimond">
+    android:background="@drawable/android_layout">
     <EditText
         android:id="@+id/userNameEt"
-        android:hint="Enter your name"
+        android:hint="@string/enter_your_name"
         android:textColor="#f9f6f6"
         android:layout_width="250dp"
         android:gravity="center"
@@ -14,30 +14,35 @@
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content" />
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_marginTop="20sp"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
-        <TextView
-            android:id="@+id/UserTypeEt"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
-            android:layout_marginLeft="58dp"
-            android:layout_marginTop="15dp"
-            android:hint="@string/type"
-            android:textSize="18dp" />
+        <RadioGroup
+            android:id="@+id/userType"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:entries="@array/type"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp">
+            <RadioButton
+                android:id="@+id/studentRb"
+                android:text="@string/student"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        </Spinner>
+            <RadioButton
+                android:id="@+id/teacherRb"
+                android:text="@string/teacher"
+                android:textSize="20sp"
+                android:layout_marginStart="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp" />
+
+        </RadioGroup>
 
     </LinearLayout>
 

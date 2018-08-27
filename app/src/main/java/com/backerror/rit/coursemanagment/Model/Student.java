@@ -3,37 +3,53 @@ package com.backerror.rit.coursemanagment.Model;
 public class Student {
     private int studentId;
     private String studentName;
-    private String StudentDept;
-    private int studentCourse;
+    private String studentDept;
+    private String studentPassword;
+    private String studentContactNumber;
+    private String studentEmail ;
 
+    public Student(String studentName, String studentDept, String studentPassword, String studentContactNumber, String studentEmail) {
+        this.studentName = studentName;
+        this.studentDept = studentDept;
+        this.studentPassword = studentPassword;
+        this.studentContactNumber = studentContactNumber;
+        this.studentEmail = studentEmail;
+    }
 
-
-    public Student(int studentId, String studentName, String studentDept, int studentCourse) {
+    public Student(int studentId, String studentName, String studentDept, String studentPassword, String studentContactNumber, String studentEmail) {
         this.studentId = studentId;
         this.studentName = studentName;
-        this.StudentDept = studentDept;
-        this.studentCourse=studentCourse;
-
-    }
-
-    public Student(String studentName, String studentDept,int studentCourse) {
-        this.studentName = studentName;
-        this.StudentDept = studentDept;
-        this.studentCourse=studentCourse;
-    }
-
-    public int getStudentId() {
-        return studentId;
+        this.studentDept = studentDept;
+        this.studentPassword = studentPassword;
+        this.studentContactNumber = studentContactNumber;
+        this.studentEmail = studentEmail;
     }
 
     public String getStudentName() {
         return studentName;
     }
 
+
     public String getStudentDept() {
-        return StudentDept;
+        return studentDept;
     }
-    public int getStudentCourse() {
-        return studentCourse;
+
+
+    public String getstudentPassword() {
+        return studentPassword;
     }
+
+
+    public String getstudentContactNumber() {
+        return studentContactNumber;
+    }
+
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+
+
+
 }

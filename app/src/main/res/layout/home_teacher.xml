@@ -1,56 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/light_purple">
+    android:background="@drawable/android_layout"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp">
+
+    </android.support.v7.widget.SearchView>
+
+
 
     <TextView
         android:id="@+id/teacherNameTV"
-        android:text="Teacher name"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/teacher_name"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/teachersDeptNameTV"
-        android:text="Department name"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/department_name"
+        android:textSize="30sp" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/regCourseTv"
-            android:text="@string/registered_course"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ListView
-            android:id="@+id/list_item_teacher"
+        <EditText
+            android:id="@+id/createCourse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ListView>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="create Course" />
+        <Button
+            android:id="@+id/createBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="250dp"
+            android:text="Create"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="#174e2e"/>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/showBt"
-        android:text="Show Student"
-        android:textStyle="bold"
+
+    <TextView
+        android:id="@+id/regCourseTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/registered_course"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/showCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ListView>
 
 
+    </LinearLayout>
 </LinearLayout>

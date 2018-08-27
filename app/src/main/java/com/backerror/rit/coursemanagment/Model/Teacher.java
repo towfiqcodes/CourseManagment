@@ -3,24 +3,29 @@ package com.backerror.rit.coursemanagment.Model;
 public class Teacher {
     private int Id;
     private String teacherName;
-    private String TeacherDept;
-    private int teacherCourse;
+    private String teacherDept;
+    private String teacherPassword;
+    private String teacherContactNumber;
+    private String teacherEmail ;
 
-    public Teacher(int id, String teacherName, String teacherDept, int teacherCourse) {
+    public Teacher() {
+    }
+
+    public Teacher(String teacherName, String teacherDept, String teacherPassword, String teacherContactNumber, String teacherEmail) {
+        this.teacherName = teacherName;
+        this.teacherDept = teacherDept;
+        this.teacherPassword = teacherPassword;
+        this.teacherContactNumber = teacherContactNumber;
+        this.teacherEmail = teacherEmail;
+    }
+
+    public Teacher(int id, String teacherName, String teacherDept, String teacherPassword, String teacherContactNumber, String teacherEmail) {
         Id = id;
         this.teacherName = teacherName;
-        TeacherDept = teacherDept;
-        this.teacherCourse = teacherCourse;
-    }
-
-    public Teacher(String teacherName, String teacherDept, int teacherCourse) {
-        this.teacherName = teacherName;
-        TeacherDept = teacherDept;
-        this.teacherCourse = teacherCourse;
-    }
-
-    public int getId() {
-        return Id;
+        this.teacherDept = teacherDept;
+        this.teacherPassword = teacherPassword;
+        this.teacherContactNumber = teacherContactNumber;
+        this.teacherEmail = teacherEmail;
     }
 
     public String getTeacherName() {
@@ -28,10 +33,18 @@ public class Teacher {
     }
 
     public String getTeacherDept() {
-        return TeacherDept;
+        return teacherDept;
     }
 
-    public int getTeacherCourse() {
-        return teacherCourse;
+    public String getTeacherPassword() {
+        return teacherPassword;
+    }
+
+    public String getteacherContactNumber() {
+        return teacherContactNumber;
+    }
+
+    public String getteacherEmail() {
+        return teacherEmail;
     }
 }
