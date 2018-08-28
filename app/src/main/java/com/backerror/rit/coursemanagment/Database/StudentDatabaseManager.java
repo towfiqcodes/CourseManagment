@@ -7,6 +7,8 @@ package com.backerror.rit.coursemanagment.Database;
 
         import com.backerror.rit.coursemanagment.Model.Student;
 
+        import java.util.ArrayList;
+        import java.util.List;
 
 
 public class StudentDatabaseManager  {
@@ -48,4 +50,6 @@ public class StudentDatabaseManager  {
         }
         return result;
     }
+
+
 }
