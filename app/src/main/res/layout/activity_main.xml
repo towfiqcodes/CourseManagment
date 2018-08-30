@@ -4,39 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@drawable/fame"
     android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/wellcome" />
 
 
-    <LinearLayout
-
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/studentBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Student"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="Teacher"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:layout_marginTop="190dp"
+        android:text="@string/course_managment_system"
+        android:textColor="#ffffff"
+        android:textSize="29sp"
+        android:gravity="center"
+        android:textStyle="italic" />
 
 
 </LinearLayout>

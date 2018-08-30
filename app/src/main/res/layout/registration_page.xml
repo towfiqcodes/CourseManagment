@@ -1,90 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/android_layout">
-    <EditText
-        android:id="@+id/userNameEt"
-        android:hint="@string/enter_your_name"
-        android:textColor="#f9f6f6"
-        android:layout_width="250dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_height="wrap_content" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="250dp"
-        android:layout_marginTop="20sp"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:minHeight="?actionBarSize"
+        android:background="#51A5A5"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/userNameLayout"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/userNameEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:inputType="textPersonName"
+            android:gravity="center"
+            android:hint="@string/enter_your_name"
+            android:textColor="#f9f6f6" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/radioButtonLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_below="@id/userNameLayout">
 
         <RadioGroup
             android:id="@+id/userType"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/studentRb"
-                android:text="@string/student"
-                android:textSize="20sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/student"
+                android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/teacherRb"
-                android:text="@string/teacher"
-                android:textSize="20sp"
-                android:layout_marginStart="35dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp" />
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="35dp"
+                android:text="@string/teacher"
+                android:textSize="20sp" />
 
         </RadioGroup>
 
-    </LinearLayout>
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/departmentEt"
-        android:hint="@string/enter_department"
-        android:layout_width="250dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/passEt"
-        android:hint="@string/enter_your_password"
-        android:layout_width="250dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/contactEt"
-        android:hint="@string/contact_number"
-        android:textColor="#ffffff"
-        android:layout_width="250dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/emailEt"
-        android:hint="@string/email"
-        android:layout_width="250dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/deptLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioButtonLayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/departmentEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:gravity="center"
+            android:hint="@string/enter_department" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deptLayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="@string/enter_your_password" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/contactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passLayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/contactEt"
+            android:layout_width="250dp"
+            android:inputType="numberSigned"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="@string/contact_number"
+            android:textColor="#ffffff" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactLayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/emailEt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="@string/email" />
+    </android.support.design.widget.TextInputLayout>
+
+
     <Button
         android:id="@+id/saveBt"
-        android:text="@string/save"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
         android:layout_width="250dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/register" />
 
-
-</LinearLayout>
+</RelativeLayout>

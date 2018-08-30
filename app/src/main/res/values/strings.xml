@@ -20,6 +20,12 @@
     <string name="teacher_name">Teacher name</string>
     <string name="teacher">Teacher</string>
     <string name="student">Student</string>
+    <string name="course_managment_system">Course Managment System</string>
+    <string name="register">Register</string>
+    <string name="hello">hello</string>
+    <string name="delete">Delete</string>
+    <string name="courses">courses</string>
+
 
     //registration page
     <string-array name="type">

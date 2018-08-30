@@ -3,6 +3,7 @@ package com.backerror.rit.coursemanagment.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.backerror.rit.coursemanagment.Database.StudentDatabaseManager;
@@ -32,9 +34,17 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.registration_page );
-        setTitle( "Sign up Page" );
         initialization();
         setOnclickAction();
+
+        Toolbar toolbar=findViewById( R.id.toolbar);
+        TextView titleText=toolbar.findViewById( R.id.titleText);
+        setSupportActionBar(toolbar);
+        titleText.setText("Sign Up");
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
     }
 

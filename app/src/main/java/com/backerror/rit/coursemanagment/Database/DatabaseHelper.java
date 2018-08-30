@@ -50,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static  final String COURSE_TABLE="courses";
     public static  final String COURSE_COLUMN_ID="course_id";
     public static  final String COURSE_COLUMN_NAME="course_name";
-    private static final String COURSE_IS_CHECKED = "course_is_checked";
+    public static final String COURSE_IS_CHECKED = "course_is_checked";
 
     public static final String DROP_TABLE_COURSE="DROP TABLE IF EXISTS "+COURSE_TABLE;
 

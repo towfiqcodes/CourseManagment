@@ -9,6 +9,10 @@ public class Courses {
         this.courseName = courseName;
     }
 
+    public Courses() {
+
+    }
+
     public void setIsChecked(int isChecked) {
 
         this.isChecked = isChecked;
