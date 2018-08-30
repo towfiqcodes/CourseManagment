@@ -50,6 +50,24 @@ public class StudentDatabaseManager {
         }
         return result;
     }
+    public Boolean userName(String name) {
+        SQLiteDatabase sqLiteDatabase=databaseHelper.getReadableDatabase();
+        Cursor cursor=sqLiteDatabase.rawQuery( "SELECT * FROM "+DatabaseHelper.STUDENT_TABLE_NAME, null);
+        boolean result=false;
+        if(cursor.getCount()==0){
+           /*Toast t=Toast.makeText(StudentDatabaseManager.this,"No data found! ",Toast.LENGTH_LONG);
+            t.show();*/
+        }else{
+            while (cursor.moveToNext()){
+                String userName=cursor.getString(cursor.getColumnIndex(DatabaseHelper.STUDENT_COLUMN_NAME));
+                if(userName.equals(name)){
+                    result=true;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
 
 
 }

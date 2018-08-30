@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.backerror.rit.coursemanagment.Database.CourseDatabaseManager;
 import com.backerror.rit.coursemanagment.Model.Courses;
+import com.backerror.rit.coursemanagment.Model.Teacher;
 import com.backerror.rit.coursemanagment.R;
 
 import java.util.ArrayList;
@@ -116,6 +117,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
                 if (insertRow > 0) {
                     Toast t = Toast.makeText( getApplicationContext(), "Data inserted! " + insertRow, Toast.LENGTH_LONG );
                     t.show();
+                    Intent intent=new Intent( TeacherHomeActivity.this, TeacherHomeActivity.class );
 
                 } else {
                     Toast t = Toast.makeText( getApplicationContext(), "Data not inserted! ", Toast.LENGTH_LONG );
@@ -152,6 +154,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
 
         }
         public void updateMethod(){
+
             coursesList = courseDatabaseManager.getAllCourse();
             ArrayList<String>listForDisplay=new ArrayList<>();
             for(Courses course:coursesList){
@@ -162,6 +165,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
             courseLV.setOnItemClickListener( new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
+
                     selectedId = coursesList.get( position ).getCourseId();
                     Courses courses=courseDatabaseManager.getCourseById( selectedId );
                     createET.setText( courses.getCourseName() );
@@ -169,6 +173,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
 
                 }
             } );
+
         }
         public void toolbarMethod(){
 
@@ -176,10 +181,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
             TextView titleText = toolbar.findViewById( R.id.titleText );
             setSupportActionBar( toolbar );
             titleText.setText( "Teacher Home" );
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().setDisplayShowHomeEnabled( true );
-                getSupportActionBar().setDisplayHomeAsUpEnabled( true );
-            }
+
 
         }
 }

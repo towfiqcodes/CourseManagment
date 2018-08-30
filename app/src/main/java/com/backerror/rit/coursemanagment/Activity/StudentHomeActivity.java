@@ -43,7 +43,6 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         coursesList=courseDatabaseManager.getAllCourse();
         StudentCourseAdapter adapter = new StudentCourseAdapter( coursesList, StudentHomeActivity.this);
         studentLV.setAdapter(adapter);
-
     }
     public void initialization(){
         studentLV=findViewById(R.id.showStudentCourse);
@@ -55,6 +54,7 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         studentDatabaseManager=new StudentDatabaseManager( this );
         student=new Student();
         //userNameTv.setText( studentDatabaseManager.getUsername());
+
 
     }
 
